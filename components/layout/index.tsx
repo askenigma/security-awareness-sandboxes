@@ -1,27 +1,3 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  const colors = require('tailwindcss/colors')
-  
-  module.exports = {
-    // ...
-    theme: {
-      extend: {
-        colors: {
-          cyan: colors.cyan,
-        },
-      },
-    },
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-      require('@tailwindcss/line-clamp'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
@@ -229,14 +205,6 @@ export function Layout() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full overflow-hidden">
-        ```
-      */}
       <div className="flex h-full flex-col">
         {/* Top nav*/}
         <header className="relative flex h-16 flex-shrink-0 items-center bg-white">
@@ -249,7 +217,7 @@ export function Layout() {
               <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=white"
-                alt="Your Company"
+                alt="EnigMail Logo"
               />
             </a>
           </div>
