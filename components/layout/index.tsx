@@ -202,7 +202,7 @@ export function Layout() {
 
   return (
     <>
-      <div className="flex h-full flex-col">
+      <div className="flex flex-col h-screen overflow-hidden">
         {/* Top nav*/}
         <header className="relative flex h-16 flex-shrink-0 items-center bg-white">
           {/* Logo area */}
