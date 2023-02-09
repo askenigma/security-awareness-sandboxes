@@ -15,11 +15,11 @@ import {
   ArchiveBoxIcon as ArchiveBoxIconOutline,
   Bars3Icon,
   BellIcon,
+  ExclamationCircleIcon,
   FlagIcon,
   InboxIcon,
-  NoSymbolIcon,
+  PaperAirplaneIcon,
   PencilSquareIcon,
-  UserCircleIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
@@ -43,11 +43,11 @@ const navigation = [
   { name: "Settings", href: "#", children: [] },
 ];
 const sidebarNavigation = [
-  { name: "Open", href: "#", icon: InboxIcon, current: true },
+  { name: "Inbox", href: "#", icon: InboxIcon, current: true },
+  { name: "Sent", href: "#", icon: PaperAirplaneIcon, current: false },
   { name: "Archive", href: "#", icon: ArchiveBoxIconOutline, current: false },
-  { name: "Customers", href: "#", icon: UserCircleIcon, current: false },
   { name: "Flagged", href: "#", icon: FlagIcon, current: false },
-  { name: "Spam", href: "#", icon: NoSymbolIcon, current: false },
+  { name: "Spam", href: "#", icon: ExclamationCircleIcon, current: false },
   { name: "Drafts", href: "#", icon: PencilSquareIcon, current: false },
 ];
 const userNavigation = [
