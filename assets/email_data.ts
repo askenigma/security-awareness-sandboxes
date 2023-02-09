@@ -101,7 +101,7 @@ export const messages = [
   },
 ];
 
-export const message = {
+export const messageExample = {
   subject: "Re: New pricing for existing customers",
   sender: "joearmstrong@example.com",
   status: "Open",
