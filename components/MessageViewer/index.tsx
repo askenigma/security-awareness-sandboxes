@@ -7,7 +7,6 @@ import {
   ChevronUpIcon,
   EllipsisVerticalIcon,
   FolderArrowDownIcon,
-  MagnifyingGlassIcon,
   PencilIcon,
   UserPlusIcon,
 } from "@heroicons/react/20/solid";

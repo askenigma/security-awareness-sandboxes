@@ -1,15 +1,8 @@
 import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
-  ArchiveBoxIcon as ArchiveBoxIconMini,
-  ArrowUturnLeftIcon,
   ChevronDownIcon,
-  ChevronUpIcon,
-  EllipsisVerticalIcon,
-  FolderArrowDownIcon,
   MagnifyingGlassIcon,
-  PencilIcon,
-  UserPlusIcon,
 } from "@heroicons/react/20/solid";
 import {
   ArchiveBoxIcon as ArchiveBoxIconOutline,
@@ -25,7 +18,7 @@ import {
 
 import { MessageViewer } from "../MessageViewer";
 
-import { messages, messageExample } from "assets/email_data";
+import { messages } from "assets/email_data";
 
 const user = {
   name: "Whitney Francis",
@@ -65,6 +58,7 @@ function classNames(...classes: any) {
 
 export function Layout() {
   const [open, setOpen] = useState(false);
+  const [selectedMessage, setSelectedMessage] = useState(messages[2]);
 
   return (
     <>
@@ -431,7 +425,7 @@ export function Layout() {
 
           {/* Main area */}
           <main className="min-w-0 flex-1 border-t border-gray-200 xl:flex">
-            <MessageViewer message={messageExample} />
+            <MessageViewer message={selectedMessage} />
 
             {/* Message list*/}
             <aside className="hidden xl:order-first xl:block xl:flex-shrink-0">
@@ -463,6 +457,7 @@ export function Layout() {
                       <li
                         key={message.id}
                         className="relative bg-white py-5 px-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-600 hover:bg-gray-50"
+                        onClick={() => setSelectedMessage(message)}
                       >
                         <div className="flex justify-between space-x-3">
                           <div className="min-w-0 flex-1">

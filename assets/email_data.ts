@@ -1,103 +1,189 @@
 export const messages = [
   {
     id: 1,
-    subject: "Request for Meeting on Friday, February 11th",
-    sender: "John Doe",
+    subject: "Password Reset Request from Microsoft Office",
+    sender: "Microsoft Office Support",
+    senderEmail: "office_support@microsoft.com",
+    status: "Open",
     href: "#",
-    date: "1d ago",
-    datetime: "2023-02-07T10:00",
+    date: "1h ago",
+    datetime: "2023-02-13T10:00",
     preview:
-      "Dear Jaime, I hope this email finds you well. I wanted to reach out and request a meeting with you on Friday, February 11th. Let me know if this time works for you and I'll send over an agenda.",
+      "We've received a request to reset the password for your Microsoft Office account. Please find a response to your request below.",
+    items: [
+      {
+        id: 100,
+        author: "Microsoft Office Support",
+        date: "Today at 10:00am",
+        datetime: "2023-02-13T10:00",
+        body: `
+          <html>
+            <head>
+              <style>
+                .body {
+                  background-color: #ffffff;
+                  padding: 20px;
+                  text-align: left;
+                }
+                .a {
+                  color: blue !important;
+                }
+              </style>
+            </head>
+            <body>
+              <div class="body">
+                <p>Dear user,</p></br>
+                <p>We've received a request to reset the password for your Microsoft Office account. To reset your password, please click on the link below:</p></br>
+                <a href='https://reset.microsoft.com'>https://reset.microsoft.com</a><br/><br/>
+                <p>If you did not request a password reset, please ignore this message and your password will remain the same.</p></br>
+                <p>Best regards,</p>
+                <p>Microsoft Office Support Team</p>
+              </div>
+            </body>
+          </html>
+          `,
+      },
+    ],
   },
   {
     id: 2,
-    subject: "Important Updates on Project X",
-    sender: "Jane Smith",
+    subject: "Proposal for New Project",
+    sender: "Alexandra Smith",
+    senderEmail: "jane.smith@enigmart.com",
+    status: "Open",
     href: "#",
-    date: "3d ago",
-    datetime: "2023-02-06T15:00",
+    date: "2d ago",
+    datetime: "2023-02-11T12:00",
     preview:
-      "Good afternoon Jaime, I hope you're doing well. I wanted to provide you with an update on Project X. Our team has made significant progress and I would love to go over the details with you.",
+      "Dear Team, I would like to present a proposal for a new project that I have been working on. I believe this project has the potential to bring significant benefits to our company. Please let me know if you have any questions or concerns. Best regards, Jane",
+    items: [
+      {
+        id: 100,
+        author: "Alexandra Smith",
+        date: "Yesterday at 1:12pm",
+        datetime: "2023-02-12T13:12",
+        body: `
+          <p>Dear Team,</p>
+          <p>I would like to present a proposal for a new project that I have been working on. I believe this project has the potential to bring significant benefits to our company.</p>
+          <p>Please let me know if you have any questions or concerns.</p>
+          <p>Best regards,</p>
+          <p>Jane</p>`,
+      },
+      {
+        id: 101,
+        author: "Emma Brown",
+        date: "Yesterday at 3:45pm",
+        datetime: "2023-02-12T15:45",
+        body: `
+          <p>Jane, I have some concerns about the feasibility of this project. Can we schedule a meeting to discuss further?</p>
+          <p>Thank you,</p>
+          <p>Emma Brown</p>
+        `,
+      },
+      {
+        id: 102,
+        author: "Michael Johnson",
+        date: "Today at 9:30am",
+        datetime: "2023-02-13T09:30",
+        body: `
+          <p>Jane, I am very interested in this project and would love to contribute. Can you please provide more information on how I can get involved?</p>
+          <p>Best regards,</p>
+          <p>Michael Johnson</p>
+        `,
+      },
+    ],
   },
   {
     id: 3,
-    subject: "Follow-Up on Proposal Submission",
-    sender: "Michael Johnson",
+    subject: "Proposal for Upgrading the Company's IT Infrastructure",
+    sender: "Jane Doe",
+    senderEmail: "jane.doe@enigmart.com",
+    status: "Open",
     href: "#",
-    date: "5d ago",
-    datetime: "2023-02-04T09:00",
-    preview:
-      "Dear Jaime, I hope this email finds you well. I wanted to follow up on the proposal we submitted last week. Have you had a chance to review it and discuss it with your team? I'd love to hear your thoughts and answer any questions you may have.",
+    date: "3d ago",
+    datetime: "2023-02-10T11:00",
+    preview: "Thanks so much! Can't wait to try it out.",
+    items: [
+      {
+        id: 100,
+        author: "Jane Doe",
+        date: "Monday at 10:00am",
+        datetime: "2023-02-10T10:00",
+        body: "Thanks so much! Can't wait to try it out.",
+      },
+      {
+        id: 101,
+        author: "Steve Smith",
+        date: "Tuesday at 9:00am",
+        datetime: "2023-02-08T09:00",
+        body: `
+              <p>Hi Jane,</p>
+              <p>I think your proposal is a great idea and I support it. Let's move forward with upgrading the company's IT infrastructure.</p>
+              <p>Best regards,</p>
+              <p>Steve</p>
+            `,
+      },
+      {
+        id: 102,
+        author: "Emily Johnson",
+        date: "Tuesday at 2:00pm",
+        datetime: "2023-02-08T14:00",
+        body: `
+              <p>Jane,</p>
+              <p>I agree with Steve. Upgrading our IT infrastructure is long overdue and will definitely benefit the company in the long run.</p>
+              <p>Best regards,</p>
+              <p>Emily</p>
+            `,
+      },
+    ],
   },
   {
     id: 4,
-    subject: "Reminder: Conference Call Tomorrow at 10am",
-    sender: "Sarah Brown",
+    subject: "Urgent request",
+    sender: "James McDaniel",
+    senderEmail: "james.mcdaniel@en1gmart.com",
+    status: "Open",
     href: "#",
     date: "1d ago",
     datetime: "2023-02-07T10:00",
     preview:
       "Hello Jaime, Just wanted to send a quick reminder about our conference call tomorrow at 10am. Please let me know if there are any changes to the schedule. Looking forward to catching up with you!",
-  },
-  {
-    id: 5,
-    subject: "Invitation to Networking Event Next Month",
-    sender: "William Davis",
-    href: "#",
-    date: "7d ago",
-    datetime: "2023-01-31T17:00",
-    preview:
-      "Dear Jaime, I hope this email finds you well. I wanted to extend an invitation to a networking event that I'll be attending next month. It's a great opportunity to connect with like-minded professionals and learn about new trends in our industry. Let me know if you're interested and I'll send over more details.",
-  },
-  {
-    id: 6,
-    subject: "Action Required: Approve Expense Report",
-    sender: "David Wilson",
-    href: "#",
-    date: "2d ago",
-    datetime: "2023-02-07T12:00",
-    preview:
-      "Good morning Jaime, I hope this email finds you well. I wanted to remind you that there's an expense report that requires your approval. Could you please take a look and let me know if everything is in order? Thank you for your help!",
-  },
-  {
-    id: 7,
-    subject: "Update on  Upcoming Trade Show Participation",
-    sender: "Emily Parker",
-    href: "#",
-    date: "4d ago",
-    datetime: "2023-02-05T14:00",
-    preview:
-      "Dear Jaime, I hope you're having a great week. I wanted to provide an update on our upcoming trade show participation. Our team has been working hard to put together a great booth and we're looking forward to showcasing our products and services. Let me know if you have any questions or would like to meet up at the show.",
-  },
-  {
-    id: 8,
-    subject: "Confirmation of Travel Arrangements",
-    sender: "Brian Anderson",
-    href: "#",
-    date: "6d ago",
-    datetime: "2023-02-03T16:00",
-    preview:
-      "Good afternoon Jaime, I hope this email finds you well. I just wanted to confirm the travel arrangements for our upcoming business trip. Our flight is scheduled for next Monday at 8am and I have arranged for a car service to pick us up from the airport. Let me know if there are any changes to the schedule.",
-  },
-  {
-    id: 9,
-    subject: "Deadline Extension Request for Proposal",
-    sender: "Karen Thompson",
-    href: "#",
-    date: "8d ago",
-    datetime: "2023-02-01T11:00",
-    preview:
-      "Dear Jaime, I hope you're doing well. I wanted to reach out and request an extension on the deadline for our proposal. We've run into some unexpected obstacles and need a bit more time to complete the project. I understand that this may cause some inconvenience, but I would greatly appreciate your understanding and support in this matter.",
-  },
-  {
-    id: 10,
-    subject: "Reminder: Performance Review Meeting Next Week",
-    sender: "Amy Lee",
-    href: "#",
-    date: "9d ago",
-    datetime: "2023-01-31T10:00",
-    preview:
-      "Hello Jaime, Just wanted to send a quick reminder about our performance review meeting next week. I have received your updated performance report and I'm looking forward to discussing your progress and setting new goals for the upcoming quarter. Let me know if there are any changes to the schedule.",
+    items: [
+      {
+        id: 100,
+        author: "James McDaniel",
+        date: "Yesterday at 7:24am",
+        datetime: "2021-01-28T19:24",
+        body: `
+          <html>
+            <head>
+              <style>
+                .body {
+                  background-color: #ffffff;
+                  padding: 20px;
+                  text-align: left;
+                }
+                a {
+                  color: blue;
+                }
+              </style>
+            </head>
+            <body>
+              <div class="body">
+                <p>Dear Jane,</p></br>
+                <p>I hope this email finds you well. I am writing to you in my capacity as the Chief People Officer of EnigMart. We are updating our employee records and we require your assistance to verify your personal information in our system.</p></br>
+                <p>To do so, we have created a secure form that you need to fill out. Please follow the link below to access the form:</p></br>
+                <a href='https://en1gmart.com/hr/profile/update'>https://en1gmart.com/hr/profile/update</a><br/></br>
+                <p>Your prompt response to this request will be greatly appreciated.</p></br>
+                <p>Best regards,</p></br>
+                <p>James McDaniel</p>
+                <p><b>CFO, EnigMart</b></p>
+              </div>
+            </body>
+        </html>
+        `,
+      },
+    ],
   },
 ];
 
@@ -107,14 +193,14 @@ export const messageExample = {
   status: "Open",
   items: [
     {
-      id: 1,
+      id: 100,
       author: "Joe Armstrong",
       date: "Yesterday at 7:24am",
       datetime: "2021-01-28T19:24",
       body: "<p>Thanks so much! Can't wait to try it out.</p>",
     },
     {
-      id: 2,
+      id: 101,
       author: "Monica White",
       date: "Wednesday at 4:35pm",
       datetime: "2021-01-27T16:35",
@@ -125,7 +211,7 @@ export const messageExample = {
         `,
     },
     {
-      id: 3,
+      id: 102,
       author: "Joe Armstrong",
       date: "Wednesday at 4:09pm",
       datetime: "2021-01-27T16:09",
