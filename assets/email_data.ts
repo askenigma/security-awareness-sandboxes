@@ -47,6 +47,54 @@ export const messages = [
   },
   {
     id: 2,
+    subject: "Urgent request",
+    sender: "James McDaniel",
+    senderEmail: "james.mcdaniel@en1gmart.com",
+    status: "Open",
+    href: "#",
+    date: "1d ago",
+    datetime: "2023-02-07T10:00",
+    preview:
+      "Hello Jaime, Just wanted to send a quick reminder about our conference call tomorrow at 10am. Please let me know if there are any changes to the schedule. Looking forward to catching up with you!",
+    items: [
+      {
+        id: 100,
+        author: "James McDaniel",
+        date: "Yesterday at 7:24am",
+        datetime: "2021-01-28T19:24",
+        body: `
+          <html>
+            <head>
+              <style>
+                .body {
+                  background-color: #ffffff;
+                  padding: 20px;
+                  text-align: left;
+                }
+                a {
+                  color: blue;
+                }
+              </style>
+            </head>
+            <body>
+              <div class="body">
+                <p>Dear Jane,</p></br>
+                <p>I hope this email finds you well. I am writing to you in my capacity as the Chief People Officer of EnigMart. We are updating our employee records and we require your assistance to verify your personal information in our system.</p></br>
+                <p>To do so, we have created a secure form that you need to fill out. Please follow the link below to access the form:</p></br>
+                <a href='https://en1gmart.com/hr/profile/update'>https://en1gmart.com/hr/profile/update</a><br/></br>
+                <p>Your prompt response to this request will be greatly appreciated.</p></br>
+                <p>Best regards,</p></br>
+                <p>James McDaniel</p>
+                <p><b>CFO, EnigMart</b></p>
+              </div>
+            </body>
+        </html>
+        `,
+      },
+    ],
+  },
+  {
+    id: 3,
     subject: "Proposal for New Project",
     sender: "Alexandra Smith",
     senderEmail: "jane.smith@enigmart.com",
@@ -94,7 +142,7 @@ export const messages = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     subject: "Proposal for Upgrading the Company's IT Infrastructure",
     sender: "Jane Doe",
     senderEmail: "jane.doe@enigmart.com",
@@ -134,54 +182,6 @@ export const messages = [
               <p>Best regards,</p>
               <p>Emily</p>
             `,
-      },
-    ],
-  },
-  {
-    id: 4,
-    subject: "Urgent request",
-    sender: "James McDaniel",
-    senderEmail: "james.mcdaniel@en1gmart.com",
-    status: "Open",
-    href: "#",
-    date: "1d ago",
-    datetime: "2023-02-07T10:00",
-    preview:
-      "Hello Jaime, Just wanted to send a quick reminder about our conference call tomorrow at 10am. Please let me know if there are any changes to the schedule. Looking forward to catching up with you!",
-    items: [
-      {
-        id: 100,
-        author: "James McDaniel",
-        date: "Yesterday at 7:24am",
-        datetime: "2021-01-28T19:24",
-        body: `
-          <html>
-            <head>
-              <style>
-                .body {
-                  background-color: #ffffff;
-                  padding: 20px;
-                  text-align: left;
-                }
-                a {
-                  color: blue;
-                }
-              </style>
-            </head>
-            <body>
-              <div class="body">
-                <p>Dear Jane,</p></br>
-                <p>I hope this email finds you well. I am writing to you in my capacity as the Chief People Officer of EnigMart. We are updating our employee records and we require your assistance to verify your personal information in our system.</p></br>
-                <p>To do so, we have created a secure form that you need to fill out. Please follow the link below to access the form:</p></br>
-                <a href='https://en1gmart.com/hr/profile/update'>https://en1gmart.com/hr/profile/update</a><br/></br>
-                <p>Your prompt response to this request will be greatly appreciated.</p></br>
-                <p>Best regards,</p></br>
-                <p>James McDaniel</p>
-                <p><b>CFO, EnigMart</b></p>
-              </div>
-            </body>
-        </html>
-        `,
       },
     ],
   },
