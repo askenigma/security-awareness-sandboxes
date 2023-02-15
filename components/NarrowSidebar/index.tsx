@@ -8,7 +8,7 @@ export function NarrowSidebar(props: any) {
     <>
       <nav
         aria-label="Sidebar"
-        className="lg:flex-shrink-0 lg:overflow-y-auto lg:bg-gray-800"
+        className="lg:flex-shrink-0 lg:overflow-y-auto bg-gray-800"
       >
         <div className="relative flex w-20 flex-col space-y-3 p-3">
           {navigationItems.map((item: any) => (
