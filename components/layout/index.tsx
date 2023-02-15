@@ -399,31 +399,7 @@ export function Layout() {
 
         {/* Bottom section */}
         <div className="flex min-h-0 flex-1 overflow-hidden">
-          {/* Narrow sidebar*/}
-          <nav
-            aria-label="Sidebar"
-            className="hidden lg:block lg:flex-shrink-0 lg:overflow-y-auto lg:bg-gray-800"
-          >
-            <div className="relative flex w-20 flex-col space-y-3 p-3">
-              {sidebarNavigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-400 hover:bg-gray-700",
-                    "flex-shrink-0 inline-flex items-center justify-center h-14 w-14 rounded-lg"
-                  )}
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                </a>
-              ))}
-            </div>
-          </nav>
-
-          {/* Main area */}
+          <NarrowSidebar navigationItems={sidebarNavigation} />
           <main className="min-w-0 flex-1 border-t border-gray-200 xl:flex">
             <MessageViewer message={selectedMessage} />
 
