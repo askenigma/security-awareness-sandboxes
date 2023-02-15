@@ -30,9 +30,9 @@ export function Layout() {
       <div className="flex flex-col h-screen overflow-hidden">
         <div className="flex min-h-0 flex-1 overflow-hidden">
           <NarrowSidebar navigationItems={sidebarNavigation} />
-          <main className="min-w-0 flex-1 border-t border-gray-200 xl:flex">
+          <main className="min-w-0 flex-1 border-t border-gray-200 flex">
             {/* List of messages*/}
-            <aside className="hidden xl:order-first xl:block xl:flex-shrink-0">
+            <aside className="xl:order-first xl:block xl:flex-shrink-0">
               <div className="relative flex h-full w-96 flex-col border-r border-gray-200 bg-gray-100">
                 <div className="flex-shrink-0">
                   <div className="flex h-16 flex-col justify-center bg-white px-6">
