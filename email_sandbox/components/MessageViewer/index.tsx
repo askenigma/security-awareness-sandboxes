@@ -98,6 +98,9 @@ export function MessageViewer(props: any) {
               <p className="mt-1 truncate text-sm text-gray-500">
                 {message.sender}
               </p>
+              <p className="mt-1 truncate text-sm text-gray-500">
+                {message.senderEmail}
+              </p>
             </div>
 
             <div className="mt-4 flex items-center justify-between sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:justify-start">

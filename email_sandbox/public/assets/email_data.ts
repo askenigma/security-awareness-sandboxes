@@ -25,19 +25,23 @@ export const messages = [
                   padding: 20px;
                   text-align: left;
                 }
-                .a {
+                .emailBody a {
                   color: blue !important;
+                }
+                .footerImage {
+                  width: 200px;
                 }
               </style>
             </head>
             <body>
-              <div class="body">
+              <div class="emailBody">
                 <p>Dear user,</p></br>
                 <p>We've received a request to reset the password for your Microsoft Office account. To reset your password, please click on the link below:</p></br>
                 <a href='https://reset.microsoft.com'>https://reset.microsoft.com</a><br/><br/>
                 <p>If you did not request a password reset, please ignore this message and your password will remain the same.</p></br>
-                <p>Best regards,</p>
+                <p>Best regards,</p></br>
                 <p>Microsoft Office Support Team</p>
+                <img class='footerImage' src='images/msft_logo.png' alt='Microsoft Logo' />
               </div>
             </body>
           </html>
@@ -66,18 +70,19 @@ export const messages = [
           <html>
             <head>
               <style>
-                .body {
+                .emailBody {
                   background-color: #ffffff;
                   padding: 20px;
                   text-align: left;
                 }
-                a {
-                  color: blue;
-                }
+                .emailBody a {
+                    color: blue;
+                  }
+                }          
               </style>
             </head>
             <body>
-              <div class="body">
+              <div class="emailBody">
                 <p>Dear Jane,</p></br>
                 <p>I hope this email finds you well. I am writing to you in my capacity as the Chief People Officer of EnigMart. We are updating our employee records and we require your assistance to verify your personal information in our system.</p></br>
                 <p>To do so, we have created a secure form that you need to fill out. Please follow the link below to access the form:</p></br>
@@ -97,7 +102,7 @@ export const messages = [
     id: 3,
     subject: "Proposal for New Project",
     sender: "Alexandra Smith",
-    senderEmail: "jane.smith@enigmart.com",
+    senderEmail: "alex.smith@enigmart.com",
     status: "Open",
     href: "#",
     date: "2d ago",
@@ -186,40 +191,3 @@ export const messages = [
     ],
   },
 ];
-
-export const messageExample = {
-  subject: "Re: New pricing for existing customers",
-  sender: "joearmstrong@example.com",
-  status: "Open",
-  items: [
-    {
-      id: 100,
-      author: "Joe Armstrong",
-      date: "Yesterday at 7:24am",
-      datetime: "2021-01-28T19:24",
-      body: "<p>Thanks so much! Can't wait to try it out.</p>",
-    },
-    {
-      id: 101,
-      author: "Monica White",
-      date: "Wednesday at 4:35pm",
-      datetime: "2021-01-27T16:35",
-      body: `
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada at ultricies tincidunt elit et, enim. Habitant nunc, adipiscing non fermentum, sed est a, aliquet. Lorem in vel libero vel augue aliquet dui commodo.</p>
-          <p>Nec malesuada sed sit ut aliquet. Cras ac pharetra, sapien purus vitae vestibulum auctor faucibus ullamcorper. Leo quam tincidunt porttitor neque, velit sed. Tortor mauris ornare ut tellus sed aliquet amet venenatis condimentum. Convallis accumsan et nunc eleifend.</p>
-          <p><strong style="font-weight: 600;">Monica White</strong><br/>Customer Service</p>
-        `,
-    },
-    {
-      id: 102,
-      author: "Joe Armstrong",
-      date: "Wednesday at 4:09pm",
-      datetime: "2021-01-27T16:09",
-      body: `
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada at ultricies tincidunt elit et, enim. Habitant nunc, adipiscing non fermentum, sed est a, aliquet. Lorem in vel libero vel augue aliquet dui commodo.</p>
-          <p>Nec malesuada sed sit ut aliquet. Cras ac pharetra, sapien purus vitae vestibulum auctor faucibus ullamcorper. Leo quam tincidunt porttitor neque, velit sed. Tortor mauris ornare ut tellus sed aliquet amet venenatis condimentum. Convallis accumsan et nunc eleifend.</p>
-          <p>– Joe</p>
-        `,
-    },
-  ],
-};

@@ -11,7 +11,7 @@ import {
 import { MessageViewer } from "../MessageViewer";
 import { NarrowSidebar } from "../NarrowSidebar";
 
-import { messages } from "assets/email_data";
+import { messages } from "@/public/assets/email_data";
 
 const sidebarNavigation = [
   { name: "Inbox", href: "#", icon: InboxIcon, current: true },
