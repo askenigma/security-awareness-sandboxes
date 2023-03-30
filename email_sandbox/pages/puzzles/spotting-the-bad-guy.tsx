@@ -1,15 +1,16 @@
 import Head from "next/head";
+import { Layout } from "@/components/Layout";
 
-export default function Home() {
+export default function Puzzle() {
   return (
     <>
       <Head>
-        <title>Email Sandbox</title>
+        <title>Spotting The Bad Guy?</title>
         <meta name="description" content="Email Sandbox" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Email Sandbox Puzzles</h1>
+      <Layout showMessageList={false} defaultMessageId={1} />
     </>
   );
 }

@@ -1,7 +1,7 @@
 export const messages = [
   {
     id: 1,
-    subject: "Password Reset Request from Microsoft Office",
+    subject: "[EXTERNAL] Password Reset Request from Microsoft Office",
     sender: "Microsoft Office Support",
     senderEmail: "office_support@microsoft.com",
     status: "Open",
@@ -41,7 +41,7 @@ export const messages = [
                 <p>If you did not request a password reset, please ignore this message and your password will remain the same.</p></br>
                 <p>Best regards,</p></br>
                 <p>Microsoft Office Support Team</p>
-                <img class='footerImage' src='images/msft_logo.png' alt='Microsoft Logo' />
+                <img class='footerImage' src='/images/msft_logo.png' alt='Microsoft Logo' />
               </div>
             </body>
           </html>
@@ -51,7 +51,7 @@ export const messages = [
   },
   {
     id: 2,
-    subject: "Urgent request",
+    subject: "[EXTERNAL] Urgent request",
     sender: "James McDaniel",
     senderEmail: "james.mcdaniel@en1gmart.com",
     status: "Open",
