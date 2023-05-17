@@ -20,7 +20,7 @@ export function MessageViewer(props: any) {
       {/* Message container */}
       <div className="bg-white min-h-0 flex-1 overflow-y-auto p-6 flex justify-center" aria-label="Message list">
         {/* Message header */}
-        <div className="max-w-[991px] w-100 space-y-8">
+        <div className="w-[991px] max-w-100 space-y-8">
           <div className="flex space-x-2 items-start border-b-2 border-gray-400 pb-4">
             {/* Left header */}
             {message.avatar ? <div
