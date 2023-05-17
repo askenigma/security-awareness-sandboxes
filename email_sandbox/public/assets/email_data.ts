@@ -103,7 +103,7 @@ export const messages = [
     role: "Office of Dr.",
     status: "Unread",
     subject: "Appointment w/ Dr. Knowles: 5/5",
-    isExternal: false,
+    isExternal: true,
     receiver: ["me"],
     datetime: "2023-04-03T19:35",
     preview: "Your appointment with Dr. Knowles is this Thursday at 2:40. Please arrive by 2:30 and remember to bring your insurance card. If you have time to do the premedical screening before hand you can find a link below.",

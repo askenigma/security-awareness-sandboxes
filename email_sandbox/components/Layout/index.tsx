@@ -71,7 +71,7 @@ export function Layout(props: LayoutProps) {
                         <div className={`flex items-center space-x-2 mb-2 ${message.status!=="Open" && "-ml-2"}`}>
                           {message.status!=="Open" && <span className="w-2 h-2 rounded-full bg-purple-650 -ml-2"></span>}
                           <p className={`truncate text-sm font-bold ${selectedMessage.id === message.id ? "text-white":"text-gray-900"}`}>
-                            {message.isExternal ? "[EXTERNAL]":""}&nbsp;{message.from}
+                            {message.isExternal ? "[EXTERNAL] ":""}{message.role ? message.role + " ": ""}{message.from}
                           </p>
                         </div>
                         <p className={`truncate text-xs ${selectedMessage.id === message.id ? "text-white":"text-gray-900"}`}>
