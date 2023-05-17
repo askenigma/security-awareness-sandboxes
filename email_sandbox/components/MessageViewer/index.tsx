@@ -26,7 +26,7 @@ export function MessageViewer(props: any) {
             {message.avatar ? <div
               className="h-[34px] w-[32px] rounded-full"
               dangerouslySetInnerHTML={{ __html: message.avatar }}
-            /> : <span className="bg-gray-500 w-10 h-10 rounded-full flex items-center justify-center font-bold">{message.from.split(' ').map((str: String) => str[0]).join('')}</span>}
+            /> : <span className="bg-gray-500 w-[32px] h-[34px] rounded-full flex items-center justify-center font-bold">{message.from.split(' ').map((str: String) => str[0]).join('')}</span>}
             
             {/* Right header */}
             <div className="flex justify-between flex-1">
