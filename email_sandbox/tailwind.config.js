@@ -14,6 +14,15 @@ module.exports = {
       },
       colors: {
         cyan: colors.cyan,
+        purple: {
+          ...colors.purple,
+          650: "#6A4BFF"
+        },
+        gray: {
+          ...colors.gray,
+          150: "rgba(217, 217, 217, 0.12)",
+          250: "#F8F6FF"
+        }
       },
     },
   },

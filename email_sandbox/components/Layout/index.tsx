@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ArchiveBoxIcon as ArchiveBoxIconOutline,
   ExclamationCircleIcon,
@@ -9,7 +9,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 import { MessageViewer } from "../MessageViewer";
-import { NarrowSidebar } from "../NarrowSidebar";
 
 import { messages } from "@/public/assets/email_data";
 
@@ -29,26 +28,23 @@ interface LayoutProps {
 
 export function Layout(props: LayoutProps) {
   const { showMessageList, defaultMessageId } = props;
+  const [mails, setMails] = useState(messages)
   const [selectedMessage, setSelectedMessage] = useState(
-    messages[defaultMessageId || 0]
+    {...messages[defaultMessageId || 0], status: "Open"}
   );
+
+  useEffect(() => {
+    setMails(prev => prev.map(m => { return m.id === selectedMessage.id ? {...selectedMessage}: {...m}}))
+  }, [selectedMessage])
 
   // List of messages
   const renderMessageList = () => {
     return (
       <aside className="xl:order-first xl:block xl:flex-shrink-0">
-        <div className="relative flex h-full w-96 flex-col border-r border-gray-200 bg-gray-100">
+        <div className="relative flex h-full w-96 flex-col border-r border-gray-200 bg-gray-250">
           <div className="flex-shrink-0">
-            <div className="flex h-16 flex-col justify-center bg-white px-6">
-              <div className="flex items-baseline space-x-3">
-                <h2 className="text-lg font-medium text-gray-900">Inbox</h2>
-                <p className="text-sm font-medium text-gray-500">
-                  {messages.length} messages
-                </p>
-              </div>
-            </div>
-            <div className="border-t border-b border-gray-200 bg-gray-50 px-6 py-2 text-sm font-medium text-gray-500">
-              Sorted by date
+            <div className="flex h-8 flex-col justify-center m-3">
+              <h2 className="text-2xl leading-4 font-bold text-gray-900">Inboxes</h2>
             </div>
           </div>
           <nav
@@ -57,13 +53,13 @@ export function Layout(props: LayoutProps) {
           >
             <ul
               role="list"
-              className="divide-y divide-gray-200 border-b border-gray-200"
+              className="p-3 space-y-2"
             >
-              {messages.map((message) => (
+              {mails.map(message => (
                 <li
                   key={message.id}
-                  className="relative bg-white py-5 px-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-600 hover:bg-gray-50"
-                  onClick={() => setSelectedMessage(message)}
+                  className={`relative pt-5 px-6 space-y-2 ${selectedMessage.id===message.id ? "bg-purple-650" : "transparent"} hover:border-gray-50 rounded-md`}
+                  onClick={() => setSelectedMessage({...message, status: 'Open'})}
                 >
                   <div className="flex justify-between space-x-3">
                     <div className="min-w-0 flex-1">
@@ -72,23 +68,26 @@ export function Layout(props: LayoutProps) {
                         className="block focus:outline-none"
                       >
                         <span className="absolute inset-0" aria-hidden="true" />
-                        <p className="truncate text-sm font-medium text-gray-900">
-                          {message.sender}
-                        </p>
-                        <p className="truncate text-sm text-gray-500">
+                        <div className={`flex items-center space-x-2 mb-2 ${message.status!=="Open" && "-ml-2"}`}>
+                          {message.status!=="Open" && <span className="w-2 h-2 rounded-full bg-purple-650 -ml-2"></span>}
+                          <p className={`truncate text-sm font-bold ${selectedMessage.id === message.id ? "text-white":"text-gray-900"}`}>
+                            {message.sender}
+                          </p>
+                        </div>
+                        <p className={`truncate text-xs ${selectedMessage.id === message.id ? "text-white":"text-gray-900"}`}>
                           {message.subject}
                         </p>
                       </a>
                     </div>
                     <time
                       dateTime={message.datetime}
-                      className="flex-shrink-0 whitespace-nowrap text-sm text-gray-500"
+                      className={`flex-shrink-0 whitespace-nowrap text-xs ${selectedMessage.id === message.id ? "text-white":"text-gray-500"}`}
                     >
-                      {message.date}
+                      {new Date(message.datetime).toLocaleString().split(', ')[1]}
                     </time>
                   </div>
-                  <div className="mt-1">
-                    <p className="text-sm text-gray-600 line-clamp-2">
+                  <div className={`mt-1 pb-5 ${selectedMessage.id!==message.id && "border-b border-gray-300"}`}>
+                    <p className={`text-xs line-clamp-2 ${selectedMessage.id === message.id ? "text-white":"text-gray-600"}`}>
                       {message.preview}
                     </p>
                   </div>
@@ -105,7 +104,6 @@ export function Layout(props: LayoutProps) {
     <>
       <div className="flex flex-col h-screen overflow-hidden">
         <div className="flex min-h-0 flex-1 overflow-hidden">
-          <NarrowSidebar navigationItems={sidebarNavigation} />
           <main className="min-w-0 flex-1 border-t border-gray-200 flex">
             {showMessageList ? renderMessageList() : null}
             {/* Message viewer*/}

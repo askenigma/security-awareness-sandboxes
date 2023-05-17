@@ -4,10 +4,12 @@ export const messages = [
     subject: "[EXTERNAL] Password Reset Request from Microsoft Office",
     sender: "Microsoft Office Support",
     senderEmail: "office_support@microsoft.com",
-    status: "Open",
+    status: "Unread",
     href: "#",
     date: "1h ago",
     datetime: "2023-02-13T10:00",
+    receiver: ['me'],
+    avatar: "<img class='footerImage' src='/favicon.ico' alt='Microsoft Logo' />",
     preview:
       "We've received a request to reset the password for your Microsoft Office account. Please find a response to your request below.",
     items: [
@@ -54,8 +56,10 @@ export const messages = [
     subject: "[EXTERNAL] Urgent request",
     sender: "James McDaniel",
     senderEmail: "james.mcdaniel@en1gmart.com",
-    status: "Open",
+    status: "Unread",
     href: "#",
+    receiver: ['me'],
+    avatar: "<img class='footerImage' src='/favicon.ico' alt='Microsoft Logo' />",
     date: "1d ago",
     datetime: "2023-02-07T10:00",
     preview:
@@ -103,10 +107,12 @@ export const messages = [
     subject: "Proposal for New Project",
     sender: "Alexandra Smith",
     senderEmail: "alex.smith@enigmart.com",
-    status: "Open",
+    status: "Unread",
     href: "#",
     date: "2d ago",
     datetime: "2023-02-11T12:00",
+    receiver: ['me'],
+    avatar: "<img class='footerImage' src='/favicon.ico' alt='Microsoft Logo' />",
     preview:
       "Dear Team, I would like to present a proposal for a new project that I have been working on. I believe this project has the potential to bring significant benefits to our company. Please let me know if you have any questions or concerns. Best regards, Jane",
     items: [
@@ -122,28 +128,28 @@ export const messages = [
           <p>Best regards,</p>
           <p>Jane</p>`,
       },
-      {
-        id: 101,
-        author: "Emma Brown",
-        date: "Yesterday at 3:45pm",
-        datetime: "2023-02-12T15:45",
-        body: `
-          <p>Jane, I have some concerns about the feasibility of this project. Can we schedule a meeting to discuss further?</p>
-          <p>Thank you,</p>
-          <p>Emma Brown</p>
-        `,
-      },
-      {
-        id: 102,
-        author: "Michael Johnson",
-        date: "Today at 9:30am",
-        datetime: "2023-02-13T09:30",
-        body: `
-          <p>Jane, I am very interested in this project and would love to contribute. Can you please provide more information on how I can get involved?</p>
-          <p>Best regards,</p>
-          <p>Michael Johnson</p>
-        `,
-      },
+      // {
+      //   id: 101,
+      //   author: "Emma Brown",
+      //   date: "Yesterday at 3:45pm",
+      //   datetime: "2023-02-12T15:45",
+      //   body: `
+      //     <p>Jane, I have some concerns about the feasibility of this project. Can we schedule a meeting to discuss further?</p>
+      //     <p>Thank you,</p>
+      //     <p>Emma Brown</p>
+      //   `,
+      // },
+      // {
+      //   id: 102,
+      //   author: "Michael Johnson",
+      //   date: "Today at 9:30am",
+      //   datetime: "2023-02-13T09:30",
+      //   body: `
+      //     <p>Jane, I am very interested in this project and would love to contribute. Can you please provide more information on how I can get involved?</p>
+      //     <p>Best regards,</p>
+      //     <p>Michael Johnson</p>
+      //   `,
+      // },
     ],
   },
   {
@@ -151,19 +157,21 @@ export const messages = [
     subject: "Proposal for Upgrading the Company's IT Infrastructure",
     sender: "Jane Doe",
     senderEmail: "jane.doe@enigmart.com",
-    status: "Open",
+    status: "Unread",
     href: "#",
     date: "3d ago",
     datetime: "2023-02-10T11:00",
+    receiver: ['me', 'Tyler', 'Alexander'],
+    avatar: "<img class='footerImage' src='/favicon.ico' alt='Microsoft Logo' />",
     preview: "Thanks so much! Can't wait to try it out.",
     items: [
-      {
-        id: 100,
-        author: "Jane Doe",
-        date: "Monday at 10:00am",
-        datetime: "2023-02-10T10:00",
-        body: "Thanks so much! Can't wait to try it out.",
-      },
+      // {
+      //   id: 100,
+      //   author: "Jane Doe",
+      //   date: "Monday at 10:00am",
+      //   datetime: "2023-02-10T10:00",
+      //   body: "Thanks so much! Can't wait to try it out.",
+      // },
       {
         id: 101,
         author: "Steve Smith",
@@ -176,18 +184,18 @@ export const messages = [
               <p>Steve</p>
             `,
       },
-      {
-        id: 102,
-        author: "Emily Johnson",
-        date: "Tuesday at 2:00pm",
-        datetime: "2023-02-08T14:00",
-        body: `
-              <p>Jane,</p>
-              <p>I agree with Steve. Upgrading our IT infrastructure is long overdue and will definitely benefit the company in the long run.</p>
-              <p>Best regards,</p>
-              <p>Emily</p>
-            `,
-      },
+      // {
+      //   id: 102,
+      //   author: "Emily Johnson",
+      //   date: "Tuesday at 2:00pm",
+      //   datetime: "2023-02-08T14:00",
+      //   body: `
+      //         <p>Jane,</p>
+      //         <p>I agree with Steve. Upgrading our IT infrastructure is long overdue and will definitely benefit the company in the long run.</p>
+      //         <p>Best regards,</p>
+      //         <p>Emily</p>
+      //       `,
+      // },
     ],
   },
 ];
