@@ -133,8 +133,52 @@ export const messages = [
             <h1 class="header">Appointment w/ Dr. Knowles: 5/5</h1>
             <h3 class="content">Your appointment with Dr. Knowles is this Thursday at 2:40. Please arrive by 2:30 and remember to bring your insurance card. <br/>If you have time to do the premedical screening before hand you can find a link below.</h3>
             <a href="#" class="link">Verify your Apple ID</a>
-            <p>We look forward to meeting you</p>
+            <p style="margin-top: 30px">We look forward to meeting you</p>
             <p>Dr. Stanley's Team</p>
+          </div>
+        </body>
+      </html>
+    `
+  },
+  {
+    id: 4,
+    href: "#",
+    from: "Mayuri Patel",
+    status: "Unread",
+    subject: "Project proposal",
+    avatar: "<img src='/images/Mayuri.png' alt='Melody' />",
+    isExternal: false,
+    receiver: ["me", "Tyler", "Alexander", "Melody"],
+    datetime: "2023-04-03T19:35",
+    preview: "I would like to present a proposal for a new project that I have been working on. I believe this project has the potential to bring in up to 10% more in revenue each month. Let me know what time owkrs best for you all so we can meet.",
+    body: `
+      <html>
+        <head>
+          <style>
+          .header {
+            font-size: 40px;
+            margin-bottom: 30px;
+          }
+          .sub-header {
+            font-size: 24px;
+            margin-bottom: 30px;
+          }
+          .content {
+            margin-bottom: 30px;
+          }
+          .link {
+            color: #2DA4FF;
+            text-decoration-line: underline;
+          }
+        </style>
+        </head>
+        <body>
+          <div>
+            <h1 class="header">Project proposal</h1>
+            <h3 class="content">I would like to present a proposal for a new project that I have been working on. I believe this project has the potential to bring in up to 10% more in revenue each month. Let me know what time owkrs best for you all so we can meet.</h3>
+            <a href="#" class="link">Verify your Apple ID</a>
+            <p style="margin-top: 30px">Cheers,</p>
+            <p>May</p>
           </div>
         </body>
       </html>
