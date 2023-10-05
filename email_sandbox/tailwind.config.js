@@ -18,4 +18,5 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/forms"), require("@tailwindcss/line-clamp")],
+  SECRET: "12vwdjkhc23-sf23xHSDHWEJ-casd23",
 };
