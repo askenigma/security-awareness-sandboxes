@@ -21,7 +21,7 @@ export const messages = [
             <head>
               <style>
                 .body {
-                  background-color: #ffffff;
+                  background-color: #eeeeee;
                   padding: 20px;
                   text-align: left;
                 }
